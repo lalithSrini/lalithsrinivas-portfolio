@@ -8,8 +8,8 @@
 
 /* ---- DOM Ready ---- */
 document.addEventListener('DOMContentLoaded', () => {
-  // Init EmailJS
-  emailjs.init('AsgVGPO4HYAS1gTFL');
+  // Init EmailJS (v4 requires object format)
+  emailjs.init({ publicKey: 'AsgVGPO4HYAS1gTFL' });
 
   initNavbar();
   initMobileMenu();
@@ -322,10 +322,24 @@ function initContactForm() {
     btnText.textContent = 'Sending...';
     submitBtn.style.opacity = '0.7';
 
-    // Send via EmailJS
-    emailjs.sendForm('service_0123tls', 'template_wdpfii9', form)
-      .then(() => {
-        // Success
+    // Send via EmailJS — variable names must match the template exactly
+    const templateParams = {
+      to_email:   'lalithsrinivas.t@gmail.com',   // {{to_email}} → To Email field
+      from_name:  fields.name.el.value.trim(),     // {{from_name}} → used in Subject
+      name:       fields.name.el.value.trim(),     // {{name}}      → From Name field
+      from_email: fields.email.el.value.trim(),    // {{from_email}} → body
+      email:      fields.email.el.value.trim(),    // {{email}}     → Reply To field
+      subject:    fields.subject.el.value.trim(),  // {{subject}}   → body
+      message:    fields.message.el.value.trim(),  // {{message}}   → body
+    };
+
+    // Send both: main notification to Lalith + auto-reply to sender
+    Promise.all([
+      emailjs.send('service_0123tls', 'template_wdpfii9', templateParams),  // Contact Us → to Lalith
+      emailjs.send('service_0123tls', 'template_ab9vmlq', templateParams),  // Auto-Reply → to sender
+    ])
+      .then(([res1, res2]) => {
+        console.log('EmailJS success:', res1.status, res2.status);
         submitBtn.disabled = false;
         btnText.textContent = original;
         submitBtn.style.opacity = '';
@@ -335,17 +349,17 @@ function initContactForm() {
         setTimeout(() => { successEl.hidden = true; }, 5000);
       })
       .catch((error) => {
-        // Error
         submitBtn.disabled = false;
         btnText.textContent = original;
         submitBtn.style.opacity = '';
+        const reason = error?.text || error?.message || JSON.stringify(error);
         console.error('EmailJS error:', error);
         const errMsg = document.createElement('div');
         errMsg.className = 'form-success';
-        errMsg.style.cssText = 'background:rgba(239,68,68,0.1);border-color:rgba(239,68,68,0.3);color:#EF4444;';
-        errMsg.textContent = '❌ Failed to send. Please email me directly at lalithsrinivas.t@gmail.com';
+        errMsg.style.cssText = 'background:rgba(239,68,68,0.1);border-color:rgba(239,68,68,0.3);color:#EF4444;font-size:0.8rem;';
+        errMsg.textContent = `❌ Error: ${reason}`;
         form.appendChild(errMsg);
-        setTimeout(() => errMsg.remove(), 6000);
+        setTimeout(() => errMsg.remove(), 10000);
       });
   });
 }

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thotamsetty Lalith Srinivas – Software Developer portfolio showcasing Android, React, and full-stack projects. Skilled in Java, Python, JavaScript, and cloud fundamentals." />
+  <meta name="keywords" content="Lalith Srinivas, Software Developer, Portfolio, Android, React, Java, Python, Full Stack" />
+  <meta name="author" content="Thotamsetty Lalith Srinivas" />
+  <meta property="og:title" content="Lalith Srinivas | Software Developer Portfolio" />
+  <meta property="og:description" content="Building secure applications, interactive web experiences, and scalable software solutions." />
+  <meta property="og:type" content="website" />
+  <title>Lalith Srinivas | Software Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span>LS<span class="logo-bracket">/&gt;</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul id="nav-menu" class="nav-menu" role="menubar">
+        <li role="none"><a href="#about"          role="menuitem" class="nav-link">About</a></li>
+        <li role="none"><a href="#education"      role="menuitem" class="nav-link">Education</a></li>
+        <li role="none"><a href="#skills"         role="menuitem" class="nav-link">Skills</a></li>
+        <li role="none"><a href="#projects"       role="menuitem" class="nav-link">Projects</a></li>
+        <li role="none"><a href="#certifications" role="menuitem" class="nav-link">Certifications</a></li>
+        <li role="none"><a href="#contact"        role="menuitem" class="nav-link">Contact</a></li>
+        <li role="none"><a href="https://drive.google.com/file/d/1QfdFh03Bisd2E7ag3AjtWY-buS2-9PoK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="nav-cta" role="menuitem">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero" aria-label="Hero section">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <p class="hero-greeting reveal-fade">👋 Hello, I'm</p>
+        <h1 class="hero-name reveal-fade">
+          <span class="hero-name-first">Lalith</span>
+          <span class="hero-name-last gradient-text">Srinivas</span>
+        </h1>
+        <div class="hero-role reveal-fade" aria-live="polite">
+          <span class="role-prefix">I'm a </span>
+          <span id="typing-text" class="typing-text" aria-label="Software Developer"></span>
+          <span class="typing-cursor" aria-hidden="true">|</span>
+        </div>
+        <p class="hero-tagline reveal-fade">
+          Building <span class="highlight">secure applications</span>, interactive web experiences,<br />
+          and <span class="highlight">scalable software solutions</span>.
+        </p>
+
+        <div class="hero-buttons reveal-fade">
+          <a href="#projects" id="btn-view-projects" class="btn btn-primary">
+            <span class="btn-icon">🚀</span> View Projects
+          </a>
+          <a href="https://drive.google.com/file/d/1QfdFh03Bisd2E7ag3AjtWY-buS2-9PoK/view?usp=sharing" target="_blank" rel="noopener noreferrer" id="btn-download-resume" class="btn btn-secondary">
+            <span class="btn-icon">📄</span> Download Resume
+          </a>
+          <a href="#contact" id="btn-contact" class="btn btn-ghost">
+            <span class="btn-icon">💬</span> Contact Me
+          </a>
+        </div>
+
+        <div class="hero-stats reveal-fade" role="list" aria-label="Key statistics">
+          <div class="stat-card" role="listitem">
+            <span class="stat-number gradient-text" data-target="8.76" data-decimal="2">0</span>
+            <span class="stat-label">CGPA</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-card" role="listitem">
+            <span class="stat-number gradient-text" data-target="3" data-prefix="" data-suffix="+">0</span>
+            <span class="stat-label">Major Projects</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-card" role="listitem">
+            <span class="stat-number gradient-text" data-target="7" data-prefix="" data-suffix="+">0</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal-fade" aria-hidden="true">
+        <div class="hero-avatar-container">
+          <div class="hero-avatar-ring ring-1"></div>
+          <div class="hero-avatar-ring ring-2"></div>
+          <div class="hero-avatar-ring ring-3"></div>
+          <div class="hero-avatar-inner">
+            <div class="code-window">
+              <div class="code-window-bar">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="code-window-title">lalith.js</span>
+              </div>
+              <pre class="code-block"><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-string">"Lalith Srinivas"</span>,
+  <span class="c-prop">role</span>: <span class="c-string">"Software Developer"</span>,
+  <span class="c-prop">skills</span>: [<span class="c-string">"Java"</span>, <span class="c-string">"React"</span>,
+           <span class="c-string">"Python"</span>, <span class="c-string">"Android"</span>],
+  <span class="c-prop">passion</span>: <span class="c-string">"Building solutions"</span>,
+  <span class="c-prop">status</span>: <span class="c-string">"Open to work 🚀"</span>
+};</code></pre>
+            </div>
+          </div>
+          <div class="floating-badge badge-java">☕ Java</div>
+          <div class="floating-badge badge-react">⚛️ React</div>
+          <div class="floating-badge badge-android">🤖 Android</div>
+          <div class="floating-badge badge-python">🐍 Python</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span class="scroll-text">Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section about-section" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Who I Am</span>
+        <h2 id="about-heading" class="section-title">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Passionate developer with a drive to create meaningful software.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p class="about-para">
+            I'm a <strong>Computer Science Engineering student</strong> at Kalasalingam Academy of Research and Education with strong foundations in software development, web technologies, programming, databases, and cloud fundamentals.
+          </p>
+          <p class="about-para">
+            Experienced in building <strong>Android applications</strong>, <strong>React-based web applications</strong>, and problem-solving solutions using <strong>Java</strong> and <strong>Python</strong>. Passionate about creating products that solve real-world problems.
+          </p>
+          <div class="about-highlights reveal-up">
+            <div class="highlight-item">
+              <span class="highlight-icon">💻</span>
+              <span>Strong Programming Skills</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🧩</span>
+              <span>Problem Solver</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🤝</span>
+              <span>Team Player</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <span>Fast Learner</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🚀</span>
+              <span>Software Dev Enthusiast</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card-grid reveal-right">
+          <div class="about-info-card">
+            <div class="info-card-icon">🎓</div>
+            <div class="info-card-content">
+              <h3>Education</h3>
+              <p>B.Tech CSE – KARE<br/>CGPA: 8.76 (2022–2026)</p>
+            </div>
+          </div>
+          <div class="about-info-card">
+            <div class="info-card-icon">📍</div>
+            <div class="info-card-content">
+              <h3>Location</h3>
+              <p>Andhra Pradesh, India</p>
+            </div>
+          </div>
+          <div class="about-info-card">
+            <div class="info-card-icon">📧</div>
+            <div class="info-card-content">
+              <h3>Email</h3>
+              <p><a href="mailto:lalithsrinivas.t@gmail.com" class="info-link">lalithsrinivas.t@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="about-info-card">
+            <div class="info-card-icon">📱</div>
+            <div class="info-card-content">
+              <h3>Phone</h3>
+              <p><a href="tel:+918978665141" class="info-link">+91 8978665141</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section education-section" aria-labelledby="education-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">My Journey</span>
+        <h2 id="education-heading" class="section-title">Education <span class="gradient-text">Timeline</span></h2>
+        <p class="section-subtitle">Academic foundation that drives my technical expertise.</p>
+      </div>
+
+      <div class="timeline" role="list" aria-label="Education timeline">
+
+        <div class="timeline-item reveal-left" role="listitem">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="timeline-badge">🎓 B.Tech CSE</div>
+              <span class="timeline-year">2022 – 2026</span>
+            </div>
+            <h3 class="timeline-inst">Kalasalingam Academy of Research and Education</h3>
+            <p class="timeline-degree">Bachelor of Technology – Computer Science Engineering</p>
+            <div class="timeline-score">
+              <span class="score-label">CGPA</span>
+              <span class="score-value gradient-text">8.76</span>
+              <div class="score-bar-wrap"><div class="score-bar" data-width="87.6"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right" role="listitem">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="timeline-badge">📚 Intermediate (MPC)</div>
+              <span class="timeline-year">2020 – 2022</span>
+            </div>
+            <h3 class="timeline-inst">Sri Chaitanya College</h3>
+            <p class="timeline-degree">Mathematics, Physics & Chemistry</p>
+            <div class="timeline-score">
+              <span class="score-label">Percentage</span>
+              <span class="score-value gradient-text">91.9%</span>
+              <div class="score-bar-wrap"><div class="score-bar" data-width="91.9"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left" role="listitem">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="timeline-badge">🏫 Secondary Education</div>
+              <span class="timeline-year">2019 – 2020</span>
+            </div>
+            <h3 class="timeline-inst">St. Mary's School</h3>
+            <p class="timeline-degree">Secondary School Certificate (SSC)</p>
+            <div class="timeline-score">
+              <span class="score-label">Percentage</span>
+              <span class="score-value gradient-text">96.5%</span>
+              <div class="score-bar-wrap"><div class="score-bar" data-width="96.5"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What I Know</span>
+        <h2 id="skills-heading" class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle">A diverse toolkit for building modern software solutions.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-category-card reveal-up">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">⌨️</span>
+            <h3 class="skill-cat-title">Programming</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">🐍 Python</span>
+            <span class="skill-tag">☕ Java</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card reveal-up">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🌐</span>
+            <h3 class="skill-cat-title">Web Technologies</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">🔶 HTML</span>
+            <span class="skill-tag">🔷 CSS</span>
+            <span class="skill-tag">🟡 JavaScript</span>
+            <span class="skill-tag">⚛️ React</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card reveal-up">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🗄️</span>
+            <h3 class="skill-cat-title">Database</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">🗃️ SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card reveal-up">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">☁️</span>
+            <h3 class="skill-cat-title">Cloud &amp; AI</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">☁️ Cloud Computing</span>
+            <span class="skill-tag">🧠 RAG Fundamentals</span>
+            <span class="skill-tag">✨ Prompt Engineering</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card reveal-up">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🛠️</span>
+            <h3 class="skill-cat-title">Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">💻 VS Code</span>
+            <span class="skill-tag">📦 Git</span>
+            <span class="skill-tag">🎨 Photoshop</span>
+            <span class="skill-tag">📊 Excel</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card reveal-up">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🔧</span>
+            <h3 class="skill-cat-title">Other</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">🔗 REST APIs</span>
+            <span class="skill-tag">🐛 Debugging</span>
+            <span class="skill-tag">🧩 Problem Solving</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card reveal-up skill-full-width">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🤝</span>
+            <h3 class="skill-cat-title">Soft Skills</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">💬 Communication</span>
+            <span class="skill-tag">👥 Teamwork</span>
+            <span class="skill-tag">🔄 Adaptability</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What I've Built</span>
+        <h2 id="projects-heading" class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Real-world solutions crafted with passion and precision.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: SafeCharge -->
+        <article class="project-card reveal-up" aria-labelledby="proj1-title">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <span class="project-icon">🔒</span>
+              </div>
+              <div class="project-meta">
+                <span class="project-category">Android Security Application</span>
+                <span class="project-status status-live">Featured</span>
+              </div>
+            </div>
+            <h3 id="proj1-title" class="project-title">SafeCharge</h3>
+            <p class="project-problem"><strong>Problem:</strong> Phone theft while charging is a growing security concern.</p>
+            <p class="project-desc">An Android app that detects charger removal and suspicious movement, providing real-time theft protection through multi-layer security measures.</p>
+            <div class="project-features">
+              <span class="feature-tag">⚡ Charger Detection</span>
+              <span class="feature-tag">📡 Motion Detection</span>
+              <span class="feature-tag">🔔 Alarm System</span>
+              <span class="feature-tag">📍 GPS Tracking</span>
+              <span class="feature-tag">📸 Camera Capture</span>
+              <span class="feature-tag">📧 Alert Email</span>
+              <span class="feature-tag">🔑 Biometric Security</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Android SDK</span>
+              <span class="tech-tag">CameraX</span>
+              <span class="tech-tag">Cloudinary</span>
+              <span class="tech-tag">EmailJS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/lalithSrini/SafeCharge" target="_blank" rel="noopener noreferrer" id="safecharge-github" class="project-btn btn-github" aria-label="View SafeCharge on GitHub">
+                <svg class="btn-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 2: KidLearn -->
+        <article class="project-card reveal-up" aria-labelledby="proj2-title">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <span class="project-icon">📚</span>
+              </div>
+              <div class="project-meta">
+                <span class="project-category">Educational Platform</span>
+                <span class="project-status status-live">Live</span>
+              </div>
+            </div>
+            <h3 id="proj2-title" class="project-title">KidLearn</h3>
+            <p class="project-problem"><strong>Problem:</strong> Children need more engaging and interactive learning experiences.</p>
+            <p class="project-desc">An interactive educational platform designed to make learning fun and accessible for children through dynamic components and responsive UI.</p>
+            <div class="project-features">
+              <span class="feature-tag">📱 Responsive UI</span>
+              <span class="feature-tag">📖 Educational Modules</span>
+              <span class="feature-tag">⚡ Dynamic Components</span>
+              <span class="feature-tag">📲 Mobile Friendly</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://lalithsrini.github.io/kidlearn/" target="_blank" rel="noopener noreferrer" id="kidlearn-demo" class="project-btn btn-demo" aria-label="View KidLearn Live Demo">
+                <svg class="btn-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8l-3.528-3.536-5.189 5.2-1.414-1.415 5.186-5.2L13 3h8z"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/lalithSrini/kidlearn" target="_blank" rel="noopener noreferrer" id="kidlearn-github" class="project-btn btn-github" aria-label="View KidLearn on GitHub">
+                <svg class="btn-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 3: Quiz App -->
+        <article class="project-card reveal-up" aria-labelledby="proj3-title">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <span class="project-icon">🏥</span>
+              </div>
+              <div class="project-meta">
+                <span class="project-category">Healthcare Education</span>
+                <span class="project-status status-live">Live</span>
+              </div>
+            </div>
+            <h3 id="proj3-title" class="project-title">Interactive Quiz Application</h3>
+            <p class="project-problem"><strong>Problem:</strong> Low public awareness of One Health concepts and healthcare education.</p>
+            <p class="project-desc">An interactive quiz platform designed to educate users about One Health concepts through dynamic questions, instant scoring, and accessible design.</p>
+            <div class="project-features">
+              <span class="feature-tag">❓ Dynamic Questions</span>
+              <span class="feature-tag">🏆 Scoring System</span>
+              <span class="feature-tag">📱 Responsive Design</span>
+              <span class="feature-tag">♿ Accessible UI</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://lalithsrini.github.io/NPTEL/" target="_blank" rel="noopener noreferrer" id="quiz-demo" class="project-btn btn-demo" aria-label="View Quiz App Live Demo">
+                <svg class="btn-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8l-3.528-3.536-5.189 5.2-1.414-1.415 5.186-5.2L13 3h8z"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/lalithSrini/wildlife" target="_blank" rel="noopener noreferrer" id="quiz-github" class="project-btn btn-github" aria-label="View Quiz App on GitHub">
+                <svg class="btn-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-glow" aria-hidden="true"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications" class="section certs-section" aria-labelledby="certs-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">My Credentials</span>
+        <h2 id="certs-heading" class="section-title">Certifications &amp; <span class="gradient-text">Training</span></h2>
+        <p class="section-subtitle">Continuous learning through recognized professional certifications.</p>
+      </div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card reveal-up" tabindex="0" aria-label="C Programming Certification">
+          <div class="cert-icon-wrap">
+            <span class="cert-icon">💻</span>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">C Programming</h3>
+            <p class="cert-issuer">Programming Foundations</p>
+          </div>
+          <div class="cert-ribbon"></div>
+        </div>
+
+        <div class="cert-card reveal-up" tabindex="0" aria-label="Python Programming Certification">
+          <div class="cert-icon-wrap">
+            <span class="cert-icon">🐍</span>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Python Programming</h3>
+            <p class="cert-issuer">Programming Foundations</p>
+          </div>
+          <div class="cert-ribbon"></div>
+        </div>
+
+        <div class="cert-card reveal-up" tabindex="0" aria-label="Java Programming Certification">
+          <div class="cert-icon-wrap">
+            <span class="cert-icon">☕</span>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Java Programming</h3>
+            <p class="cert-issuer">Programming Foundations</p>
+          </div>
+          <div class="cert-ribbon"></div>
+        </div>
+
+        <div class="cert-card reveal-up" tabindex="0" aria-label="Deep Neural Networks with PyTorch Certification">
+          <div class="cert-icon-wrap">
+            <span class="cert-icon">🧠</span>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Deep Neural Networks</h3>
+            <p class="cert-issuer">PyTorch &amp; Deep Learning</p>
+          </div>
+          <div class="cert-ribbon"></div>
+        </div>
+
+        <div class="cert-card reveal-up" tabindex="0" aria-label="Database Management Systems Certification">
+          <div class="cert-icon-wrap">
+            <span class="cert-icon">🗄️</span>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Database Management</h3>
+            <p class="cert-issuer">DBMS Fundamentals</p>
+          </div>
+          <div class="cert-ribbon"></div>
+        </div>
+
+        <div class="cert-card reveal-up" tabindex="0" aria-label="Web Development Training Certification">
+          <div class="cert-icon-wrap">
+            <span class="cert-icon">🌐</span>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Web Development</h3>
+            <p class="cert-issuer">Full Stack Training</p>
+          </div>
+          <div class="cert-ribbon"></div>
+        </div>
+
+        <div class="cert-card reveal-up" tabindex="0" aria-label="Design and Analysis of Algorithms Certification">
+          <div class="cert-icon-wrap">
+            <span class="cert-icon">📐</span>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Design &amp; Analysis of Algorithms</h3>
+            <p class="cert-issuer">Computer Science Theory</p>
+          </div>
+          <div class="cert-ribbon"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements" class="section achievements-section" aria-labelledby="achievements-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Milestones</span>
+        <h2 id="achievements-heading" class="section-title">Key <span class="gradient-text">Achievements</span></h2>
+        <p class="section-subtitle">Highlights that define my academic and professional journey.</p>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card reveal-up">
+          <div class="achievement-icon">🏆</div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">8.76 CGPA</h3>
+            <p class="achievement-desc">Maintained a strong academic record throughout B.Tech CSE at KARE University.</p>
+          </div>
+        </div>
+        <div class="achievement-card reveal-up">
+          <div class="achievement-icon">🔒</div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Android Security App</h3>
+            <p class="achievement-desc">Built SafeCharge — a full-featured Android anti-theft application with GPS, camera, and email alerts.</p>
+          </div>
+        </div>
+        <div class="achievement-card reveal-up">
+          <div class="achievement-icon">💻</div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Multiple Web Applications</h3>
+            <p class="achievement-desc">Developed KidLearn and an Interactive Quiz App using React with responsive and accessible UI.</p>
+          </div>
+        </div>
+        <div class="achievement-card reveal-up">
+          <div class="achievement-icon">📜</div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">7+ Certifications</h3>
+            <p class="achievement-desc">Completed professional certifications spanning programming, AI, databases, and web development.</p>
+          </div>
+        </div>
+        <div class="achievement-card reveal-up">
+          <div class="achievement-icon">🧩</div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Strong Programming Foundation</h3>
+            <p class="achievement-desc">Proficient in Java, Python, and JavaScript with hands-on experience in real-world applications.</p>
+          </div>
+        </div>
+        <div class="achievement-card reveal-up">
+          <div class="achievement-icon">🚀</div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Hands-on Project Experience</h3>
+            <p class="achievement-desc">Delivered production-quality projects across Android, web, and educational domains.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESUME ===== -->
+  <section id="resume" class="section resume-section" aria-labelledby="resume-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">My Resume</span>
+        <h2 id="resume-heading" class="section-title">Download <span class="gradient-text">Resume</span></h2>
+        <p class="section-subtitle">Get a complete overview of my experience and skills.</p>
+      </div>
+
+      <div class="resume-card reveal-up">
+        <div class="resume-preview">
+          <div class="resume-doc-icon" aria-hidden="true">
+            <div class="doc-page">
+              <div class="doc-header-bar"></div>
+              <div class="doc-line doc-line-wide"></div>
+              <div class="doc-line"></div>
+              <div class="doc-line doc-line-short"></div>
+              <div class="doc-divider"></div>
+              <div class="doc-line"></div>
+              <div class="doc-line doc-line-wide"></div>
+              <div class="doc-line doc-line-short"></div>
+              <div class="doc-line"></div>
+              <div class="doc-line doc-line-wide"></div>
+            </div>
+          </div>
+          <div class="resume-info">
+            <h3 class="resume-name">Thotamsetty Lalith Srinivas</h3>
+            <p class="resume-subtitle">Software Developer · B.Tech CSE · CGPA 8.76</p>
+            <ul class="resume-highlights">
+              <li>✅ 3+ Major Projects</li>
+              <li>✅ 7+ Certifications</li>
+              <li>✅ Java, Python, React, Android</li>
+              <li>✅ Cloud &amp; AI Fundamentals</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://drive.google.com/file/d/1QfdFh03Bisd2E7ag3AjtWY-buS2-9PoK/view?usp=sharing" target="_blank" rel="noopener noreferrer" id="resume-download-btn" class="btn btn-primary btn-large" aria-label="Download Lalith Srinivas Resume PDF">
+          <span class="btn-icon">📄</span> Download Resume PDF
+          <svg class="download-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 id="contact-heading" class="section-title">Contact <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Open to opportunities. Let's build something great together.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3 class="contact-info-title">Let's Connect</h3>
+          <p class="contact-info-desc">I'm currently open to full-time roles, internships, and freelance opportunities. Feel free to reach out!</p>
+
+          <div class="contact-details">
+            <a href="tel:+918978665141" id="contact-phone" class="contact-detail-item" aria-label="Call Lalith Srinivas">
+              <div class="contact-detail-icon">📱</div>
+              <div>
+                <span class="contact-detail-label">Phone</span>
+                <span class="contact-detail-value">+91 8978665141</span>
+              </div>
+            </a>
+            <a href="mailto:lalithsrinivas.t@gmail.com" id="contact-email" class="contact-detail-item" aria-label="Email Lalith Srinivas">
+              <div class="contact-detail-icon">📧</div>
+              <div>
+                <span class="contact-detail-label">Email</span>
+                <span class="contact-detail-value">lalithsrinivas.t@gmail.com</span>
+              </div>
+            </a>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">📍</div>
+              <div>
+                <span class="contact-detail-label">Location</span>
+                <span class="contact-detail-value">Andhra Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/lalithsrinivas" target="_blank" rel="noopener noreferrer" id="social-github" class="social-btn" aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              GitHub
+            </a>
+            <a href="https://linkedin.com/in/lalithsrinivas" target="_blank" rel="noopener noreferrer" id="social-linkedin" class="social-btn" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form reveal-right" aria-label="Contact form" novalidate>
+          <div class="form-group">
+            <label for="contact-name" class="form-label">Your Name</label>
+            <input type="text" id="contact-name" name="name" class="form-input" placeholder="John Doe" required autocomplete="name" />
+            <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-email-input" class="form-label">Your Email</label>
+            <input type="email" id="contact-email-input" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email" />
+            <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject" class="form-label">Subject</label>
+            <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="Job Opportunity / Collaboration" required />
+            <span class="form-error" id="subject-error" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-message" class="form-label">Message</label>
+            <textarea id="contact-message" name="message" class="form-input form-textarea" placeholder="Hi Lalith, I'd love to connect about..." required rows="5"></textarea>
+            <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
+          </div>
+          <button type="submit" id="form-submit-btn" class="btn btn-primary btn-full">
+            <span class="btn-icon">🚀</span>
+            <span class="btn-text">Send Message</span>
+          </button>
+          <div id="form-success" class="form-success" role="status" aria-live="polite" hidden>
+            ✅ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="Back to top">
+            <span class="logo-bracket">&lt;</span>LS<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p class="footer-tagline">Building software that solves real-world problems.</p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-links-title">Quick Links</h4>
+          <ul class="footer-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-socials-wrap">
+          <h4 class="footer-links-title">Connect</h4>
+          <div class="footer-socials">
+            <a href="https://github.com/lalithsrinivas" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/lalithsrinivas" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:lalithsrinivas.t@gmail.com" class="footer-social-btn" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 <strong>Lalith Srinivas</strong>. All Rights Reserved.</p>
+        <p class="footer-made">Made with ❤️ in Andhra Pradesh, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-8 8h5v8h6v-8h5l-8-8z"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -8,6 +8,9 @@
 
 /* ---- DOM Ready ---- */
 document.addEventListener('DOMContentLoaded', () => {
+  // Init EmailJS
+  emailjs.init('AsgVGPO4HYAS1gTFL');
+
   initNavbar();
   initMobileMenu();
   initTypingAnimation();
@@ -312,22 +315,38 @@ function initContactForm() {
 
     if (hasError) return;
 
-    // Simulate sending
+    // Show sending state
     const btnText = submitBtn.querySelector('.btn-text');
     const original = btnText.textContent;
     submitBtn.disabled = true;
     btnText.textContent = 'Sending...';
     submitBtn.style.opacity = '0.7';
 
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      btnText.textContent = original;
-      submitBtn.style.opacity = '';
-      form.reset();
-      successEl.hidden = false;
-      successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      setTimeout(() => { successEl.hidden = true; }, 5000);
-    }, 1500);
+    // Send via EmailJS
+    emailjs.sendForm('service_0123tls', 'template_wdpfii9', form)
+      .then(() => {
+        // Success
+        submitBtn.disabled = false;
+        btnText.textContent = original;
+        submitBtn.style.opacity = '';
+        form.reset();
+        successEl.hidden = false;
+        successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        setTimeout(() => { successEl.hidden = true; }, 5000);
+      })
+      .catch((error) => {
+        // Error
+        submitBtn.disabled = false;
+        btnText.textContent = original;
+        submitBtn.style.opacity = '';
+        console.error('EmailJS error:', error);
+        const errMsg = document.createElement('div');
+        errMsg.className = 'form-success';
+        errMsg.style.cssText = 'background:rgba(239,68,68,0.1);border-color:rgba(239,68,68,0.3);color:#EF4444;';
+        errMsg.textContent = '❌ Failed to send. Please email me directly at lalithsrinivas.t@gmail.com';
+        form.appendChild(errMsg);
+        setTimeout(() => errMsg.remove(), 6000);
+      });
   });
 }
 
